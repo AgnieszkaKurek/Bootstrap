@@ -2,70 +2,61 @@
 <html> 
 <head> 
     <meta charset="utf-8"> 
-    <title>Menus & Buttons</title> 
+    <title>Navigation</title> 
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
     <script src="Scripts/jquery-1.8.3.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
  </head>
  <body>
-     <div class="container">
+     
+
+    <div class="container">
 
         <div class="row">
-            <div class="span12">
-                <h2>Button groups</h2>
+            <div class="span3">
+                <h2>Tabs & Pills</h2>
 
-                <div class="btn-toolbar">
-                    <div class="btn-group">
-                        <button class="btn"><i class="icon-backward"></i></button>
-                        <button class="btn"><i class="icon-play"></i></button>
-                        <button class="btn"><i class="icon-forward"></i></button>
-                    </div>
-                    <div class="btn-group">
-                        <button class="btn"><i class="icon-plus"></i></button>
-                        <button class="btn"><i class="icon-minus"></i></button>
-                        <button class="btn"><i class="icon-asterisk"></i></button>
-                    </div>
-                </div>
-                <hr />
-                <h2>Buttons with menus</h2>
-                
-                <div class="btn-toolbar">
-                    <div class="btn-group dropup">
-
-                        <a class="btn btn-primary btn-large dropdown-toggle" data-toggle="dropdown" href="#">See the sites
-                            <span class="caret"></span>
+                <ul class="nav nav-list">
+                    <li class="nav-header">Places to go</li>
+                    <li><a href="#">Home</a></li>
+                    <li class="active"><a href="#">Contact</a></li>
+                    <li><a href="#">Sales</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">See more sites!
+                            <b class="caret"></b>
                         </a>
-
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                        <ul class="dropdown-menu">
                             <li><a tabindex="-1" href="http://pluralsight.com">Pluralsight</a></li>
                             <li><a tabindex="-1" href="http://amazon.com">Amazon</a></li>
                         </ul>
+                    </li>
+                </ul>
 
-                    </div>                   
-                        <div class="btn-group">
-                        <a class="btn btn-large btn-primary" href="#">See the sites</a>
-                        <a class="btn btn-large btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
-                            <span class="caret"></span>
-                        </a>
-
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                            <li><a tabindex="-1" href="http://pluralsight.com">Pluralsight</a></li>
-                            <li><a tabindex="-1" href="http://amazon.com">Amazon</a></li>
-                        </ul>
-
-                    </div>                   
+            </div>
+            <div class="span9">
+                <h2>Tabbable</h2>
+                <div class="tabbable tabs-below">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#tab1" data-toggle="tab">Section 1</a></li>
+                        <li>
+                            <a href="#tab2" data-toggle="tab">Section 2</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1">
+                            <p>Twitter Bootstrap is fun!</p>
+                        </div>
+                        <div class="tab-pane" id="tab2">
+                            <p>Pluralsight is fun!</p>
+                        </div>
+                    </div>
                 </div>
+
 
             </div>
         </div>
-
-
     </div>
 
-     
-
-
-    
    
 </body>
 </html>
