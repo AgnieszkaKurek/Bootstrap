@@ -9,7 +9,24 @@
     <script src="bootstrap/js/bootstrap.js"></script>
 
 </head>
-<body>
+<body data-spy="scroll" data-target=".navspy" data-offset="40>
+    <nav class="nav navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner navspy">
+            <a class="brand" href="#">JavaScript</a>
+
+
+            <ul class="nav">
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#modal">Modal</a></li>
+                <li><a href="#tooltips">Tooltips</a></li>
+                <li><a href="#spy">Scrollspy</a></li>                
+                <li><a href="#language">Typeahead</a></li>
+                <li><a href="#carousel">Carousel</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
     <div class="container">
 
         <div class="row">
@@ -140,6 +157,20 @@
                                              .click(function (e) { e.preventDefault() });  
                     });
                 </script>
+                
+                 <div class="span2">
+                <section class="navspy">
+                    <ul id="navigation" class="nav nav-pills nav-stacked affix">
+                        <li><a href="#buttons">Buttons</a></li>
+                        <li><a href="#modal">Modal</a></li>
+                        <li><a href="#tooltips">Tooltips</a></li>
+                        <li><a href="#spy">Scrollspy</a></li>                        
+                        <li><a href="#language">Typeahead</a></li>
+                        <li><a href="#carousel">Carousel</a></li>
+                     </ul>
+                 </section>
+                 </div>
+
                                 
 
 
