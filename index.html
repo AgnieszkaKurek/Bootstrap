@@ -34,19 +34,19 @@
                     Save the image
                 </button>               
                 <script>
-                    $(function() {
-                        $("#imageSaver").click(function() {
+                    $(function () {
+                        $("#imageSaver").click(function () {
                             var btn = $(this);
                             btn.button("loading");
                             
-                            setTimeout(function() {
+                            setTimeout(function () {
                                 btn.button("reset");
                             }, 2000);
                         });
-                       $("#getbuttonstates").click(function() {
+                       $("#getbuttonstates").click(function () {
                            
                            var output = "";
-                           $("#btngroup").children().each(function() {
+                           $("#btngroup").children().each(function () {
                                output += $(this).text() + "is" + $(this).hasClass("active") + " ";
                            });   
                            $("#buttonstates").text(output);
@@ -54,5 +54,51 @@
                     });
                 </script>
                 <hr/>
+                <h2 id="modal">Modals</h2>
+
+                <a href="#themodal" role="button" class="btn btn-primary" data-toggle="modal">Launch a modal dialog</a>
+
+                <div id="themodal" class="modal hide fade">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h3>Modal header</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to do this?</p>
+                        <div class="progress progress-striped">
+                            <div id="doitprogress" class="bar"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn" data-dismiss="modal">Close</a>
+                        <a id="yesbutton" href="#" class="btn btn-primary" data-loading-text="Doing it...">Yes! Do it now!</a>
+                    </div>
+                </div>
+                <script>    
+                    $(function () {
+                        var yesButton = $("#yesbutton");
+                        var theModal = $("#themodal");
+                        var progress = $("#doitprogress");
+                        
+                        yesButton.click(function (){
+                            yesButton.button("loading");
+                            
+                            var counter = 0;
+                            var countDown = function () {
+                                counter++;
+                                if (counter == 11) {
+                                    yesButton.button("reset");
+                                    theModal.modal("hide");
+                                }
+                                else {
+                                    progress.width(counter * 10 + "%");
+                                    setTimeout(countDown, 500); 
+                                }
+                            };
+                            setTimeout(countDown, 500); 
+                        });
+                    });
+                </script>
+
     
 </body>
