@@ -84,6 +84,10 @@
                     All other cells either remain dead, or die (from loneliness if there are not enough living neighbors, or overcrowding if there are too many living neighbors). When you visualize the game of life, amazing patterns can emerge. There are “gliders”, “oscillators”, and other chaotic and beautiful designs. People say they can see the rise and fall of ancient Rome played out on a computer screen. You can find many references to the game on the Internet and read about the impact of the game on mathematics and computing. For now, however, let’s try to put together a simple implementation for WPF. 
                     <p></p>
                     <h3>Building a UI with Angled Brackets</h3>
+                    <div class="alert alert-success">
+                        <button class="close" data-dismiss="alert">&times</button>
+                        <strong>Wow!</strong>You made it this far!
+                    </div>
                     <p>Windows Presentation Foundation is one piece of the new WinFX framework. The goal of WPF is to provide a platform for building software with an enhanced user experience. WPF includes all of the user interface pieces we need to build a better presentation layer, including support for vector graphics, rich media, high-quality typography, and animations. Underneath the managed code exterior, WPF interfaces with Direct3D to take full advantage of specialized graphics hardware on a machine. </p>
                     <p>WPF is not just about UI widgets and anti-aliasing, however. WPF understands a declarative markup language called XAML. XAML is short for eXtensible Application Markup Language, and is pronounced “Zammel”. We can use XAML to specify a user interface in a declarative fashion. XAML files are valid XML files, so not only can humans read and write XAML, but software tools and utilities can easily create, transform, and parse XAML. XAML will enable artists and their artsy tools to work closely with developers and their nerdy tools (or at least there should be less blood shed than in the past). </p>
                     <p>Declaratively building a UI with angled brackets is nothing new in the world of .NET. ASP.NET developers have been building UIs for years like this: </p>
@@ -311,6 +315,16 @@
                     <span class="label label-info">Info</span>
                     <span class="label label-inverse">Inverse</span>
                 </section>
+                <hr/>
+                 <section>
+                    <span class="badge">B</span>
+                    <span class="badge badge-success">S</span>
+                    <span class="badge badge-warning">W</span>
+                    <span class="badge badge-important">I</span>
+                    <span class="badge badge-info"><i class="icon-info-sign icon-white"></i></span>
+                    <span class="badge badge-inverse">O</span>
+                </section>
+                
                 
             </div>
         </div>
