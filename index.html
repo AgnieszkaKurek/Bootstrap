@@ -99,6 +99,50 @@
                         });
                     });
                 </script>
+                <hr/>
+                <h2 id="tooltips">Tooltips</h2>
+
+                A <a id="cpu" href="#" rel="tooltip" 
+                    title="central processing unit" 
+                    data-placement="right"
+                    class="initialism">CPU</a> is the hardware within a computer that carries out the instructions of a 
+                computer program by performing the basic arithmetical, logical, and 
+                input/output operations of the system. The term has been in use in the 
+                computer industry at least since the early 1960s.[2] The form, design, 
+                and implementation of CPUs have changed over the course of their history, 
+                but their fundamental operation remains much the same.
+                In older computers, CPUs require one or more printed circuit boards. 
+                With the invention of 
+                the microprocessor, a CPU could be contained within a single silicon chip. 
+                The first computers to use microprocessors were personal computers and 
+                small workstations. Since the 1970s the microprocessor class of CPUs has 
+                almost completely overtaken all other CPU implementations, to the extent 
+                that even mainframe computers use one or more microprocessors. Modern 
+                microprocessors are large scale integrated circuits in packages typically 
+                less than four centimeters square, with hundreds of connecting pins.
+                A computer can have more than one CPU; this is called multiprocessing. 
+                Some microprocessors can contain multiple CPUs on a single chip; 
+                those microprocessors are called multi-core processors.
+                Two typical components of a CPU are the 
+                <a href="#" rel="popover"
+                    data-content="This is where the computations take place!"
+                    data-original-title="Arithmetic Logic Unit">ALU</a>, which performs 
+                arithmetic and logical operations, and the control unit (CU), which extracts 
+                instructions from memory and decodes and executes them, calling on the ALU when necessary.
+                Not all computational systems rely on a central processing unit. An array processor or 
+                vector processor has multiple parallel computing elements, with no one unit
+                 considered the "center". In the distributed computing model, problems are solved 
+                by a distributed interconnected set of processors.
+                <script>    
+                    $(function(){
+                        $("a[rel='tooltip']").tooltip();
+                        $("a[rel='popover']").popover({ placement: "right" })
+                                             .click(function (e) { e.preventDefault() });  
+                    });
+                </script>
+                                
+
+
 
     
 </body>
